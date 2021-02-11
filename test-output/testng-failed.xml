@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.listeners.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="2" verbose="3" name="crmpracticeframework/chrome(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.tests.LoginTest -->
+    </classes>
+  </test> <!-- crmpracticeframework/chrome(failed) -->
+  <test thread-count="2" verbose="3" name="crmpracticeframework/Firefox(failed)" parallel="methods">
+    <parameter name="browser" value="ff"/>
+    <classes>
+      <class name="com.tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.tests.LoginTest -->
+    </classes>
+  </test> <!-- crmpracticeframework/Firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
